@@ -1,3 +1,4 @@
+/* Creates resistance session table if it doesn't esist */
 CREATE TABLE IF NOT EXISTS resistance_session(
     resistance_id VARCHAR(256) NOT NULL UNIQUE,
     user_id VARCHAR(256) NOT NULL,

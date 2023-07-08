@@ -1,3 +1,4 @@
+/* Creates users table if it doesn't exists */
 CREATE TABLE IF NOT EXISTS users(
     user_id VARCHAR(256) NOT NULL UNIQUE,
     first_name VARCHAR(20) NOT NULL,

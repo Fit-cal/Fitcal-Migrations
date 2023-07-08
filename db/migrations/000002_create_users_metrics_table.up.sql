@@ -1,3 +1,4 @@
+/* Creates user metrics table if exists */
 CREATE TABLE IF NOT EXISTS user_metrics(
     user_metrics_id VARCHAR(256) NOT NULL UNIQUE,
     user_id VARCHAR(256) NOT NULL UNIQUE,

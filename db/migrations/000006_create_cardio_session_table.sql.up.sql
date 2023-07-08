@@ -1,3 +1,4 @@
+/* Creates cardio session table if it doesn't exist */
 CREATE TABLE IF NOT EXISTS cardio_session(
     cardio_id VARCHAR(256) NOT NULL UNIQUE,
     user_id VARCHAR(256) NOT NULL,

@@ -1,3 +1,4 @@
+/* Creates progress table if exits */
 CREATE TABLE IF NOT EXISTS progress(
     progress_id VARCHAR(256) NOT NULL UNIQUE,
     user_id VARCHAR(256) NOT NULL,

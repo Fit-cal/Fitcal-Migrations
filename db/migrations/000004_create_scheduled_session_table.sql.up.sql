@@ -1,3 +1,4 @@
+/* Creates scheduled session table if it does'n exist */
 CREATE TABLE IF NOT EXISTS scheduled_session(
     planned_id VARCHAR(256) NOT NULL UNIQUE,
     user_id VARCHAR(256) NOT NULL,
