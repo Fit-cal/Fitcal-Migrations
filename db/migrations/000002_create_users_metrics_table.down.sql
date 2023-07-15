@@ -1,1 +1,2 @@
-DROP TABLE user_metrics CASCADE;
+/* Deletes user metrics table if exists */
+DROP TABLE IF EXISTS user_metrics CASCADE;

@@ -1,0 +1,27 @@
+/* Creates progress table if exits */
+CREATE TABLE IF NOT EXISTS progress(
+    progress_id VARCHAR(256) NOT NULL UNIQUE,
+    user_id VARCHAR(256) NOT NULL,
+    weight INT(3) NOT NULL,
+    body_fat INT(3) NOT NULL,
+    waist_circum INT(3) NOT NULL,
+    hip_circum INT(3) NOT NULL,
+    chest_circum INT(3) NOT NULL,
+    arm_circum INT(3) NOT NULL,
+    thigh_circum INT(3) NOT NULL,
+    calf_circum INT(3) NOT NULL,
+    neck_circum INT(3) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    CONSTRAINT check_progress_weight_range CHECK (weight BETWEEN 2 AND 635),
+    CONSTRAINT check_body_fat_range CHECK (body_fat BETWEEN 2 AND 60),
+    CONSTRAINT check_waistcircum_range CHECK (waist_circum BETWEEN 22 AND 50),
+    CONSTRAINT check_hipcircum_range CHECK (hip_circum BETWEEN 33 AND 62),
+    CONSTRAINT check_chestcircum_range CHECK (chest_circum BETWEEN 28 AND 62),
+    CONSTRAINT check_armcircum_range CHECK (arm_circum BETWEEN 8 AND 20),
+    CONSTRAINT check_thighcircum_range CHECK (thigh_circum BETWEEN 14 AND 30),
+    CONSTRAINT check_calfcircum_range CHECK (calf_circum BETWEEN 8 AND 18),
+    CONSTRAINT check_neckcircum_range CHECK (neck_circum BETWEEN 11 AND 21),
+    PRIMARY KEY(progress_id),
+    FOREIGN KEY(user_id) REFERENCES users(user_id)
+);
